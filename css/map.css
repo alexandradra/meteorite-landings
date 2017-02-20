@@ -28,7 +28,7 @@ html, body, #menu, #googleMap {
     transition: left 1s;
     left:-400px;
     z-index: 2;
-    opacity:0.9;
+    opacity:0.8;
 }
 
 #menu.open {
@@ -46,7 +46,7 @@ html, body, #menu, #googleMap {
     padding: 3px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    opacity:0.9;
+    opacity:0.8;
 }
 #openmenu:hover{
   cursor: pointer;
