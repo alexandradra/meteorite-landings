@@ -9,7 +9,15 @@
 html, body {
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+}
+
+html, body, #menu, #googleMap{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#menu{
+    width:0;
+    height:0;
 }
