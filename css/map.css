@@ -4,6 +4,12 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    float: left;
+    transition: width 1s;
+}
+
+#googleMap.open {
+    width: calc(100% - 400px);
 }
 
 html, body {
@@ -11,13 +17,53 @@ html, body {
     width: 100%;
 }
 
-html, body, #menu, #googleMap{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html, body, #menu, #googleMap {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-#menu{
-    width:0;
-    height:0;
+#menu {
+    position: relative;
+    float: left;
+    width: 0px;
+    height: 100%;
+    background-color: #c5cddb;
+    transition: width 1s;
+}
+
+#menu.open {
+    width: 400px;
+}
+
+#openmenu {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50px;
+    right: -40px;
+    background-color: #c5cddb;
+    z-index: 2;
+    padding: 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#openmenu:hover{
+  cursor: pointer;
+}
+
+#closemenu {
+    width: 30px;
+    padding: 5px;
+    margin: auto;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition : transform 1s;
+}
+
+#closemenu.open {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
