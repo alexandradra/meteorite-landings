@@ -8,10 +8,6 @@
     transition: width 1s;
 }
 
-#googleMap.open {
-    width: calc(100% - 400px);
-}
-
 html, body {
     height: 100%;
     width: 100%;
@@ -24,16 +20,19 @@ html, body, #menu, #googleMap {
 }
 
 #menu {
-    position: relative;
+    position: absolute;
     float: left;
-    width: 0px;
+    width: 400px;
     height: 100%;
     background-color: #c5cddb;
-    transition: width 1s;
+    transition: left 1s;
+    left:-400px;
+    z-index: 2;
+    opacity:0.9;
 }
 
 #menu.open {
-    width: 400px;
+    left:0;
 }
 
 #openmenu {
@@ -47,6 +46,7 @@ html, body, #menu, #googleMap {
     padding: 3px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    opacity:0.9;
 }
 #openmenu:hover{
   cursor: pointer;
@@ -66,4 +66,10 @@ html, body, #menu, #googleMap {
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
 }
