@@ -1,6 +1,6 @@
 // Construct the query string
 url = 'https://data.nasa.gov/resource/gh4g-9sfh.json?' +
-    '$limit=40000' +
+    '$limit=30000' +
     '&$$app_token=tLLDhTKjLKruR1AmC4EMRiqYA';
 
 // Intialize our map
@@ -8,7 +8,7 @@ function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(30, 0),
         zoom: 3,
-        disableDefaultUI: true
+        disableDefaultUI: false
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 

@@ -44,6 +44,7 @@ h1 {
 h2 {
     font-size: 1.1em;
     bottom: 0;
+    right: 4%;
 }
 .classof, .classof:hover {
   color: #1F5CA9;
@@ -129,6 +130,15 @@ h2 {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    h1 {
+      font-size: 1.2em;
+      text-align: center;
+      width: 80%;
+      margin-left: 8%;
+    }
+    h1, h2 {
+        left: 10px;
+    }
     #menu {
         width: 90%;
         left: -90%;
