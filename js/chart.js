@@ -294,6 +294,6 @@
     zingchart.render({ // Render Method[3]
         id: 'chartDiv',
         data: chartData,
-        height: 500,
-        width: 450
+        height: 400,
+        width: 500
     });

@@ -22,11 +22,11 @@ html, body, #menu, #googleMap {
 #menu {
     position: absolute;
     float: left;
-    width: 400px;
+    width: 500px;
     height: 100%;
     background-color: #c5cddb;
     transition: left 1s;
-    left:-400px;
+    left:-500px;
     z-index: 2;
     opacity:0.8;
 }
