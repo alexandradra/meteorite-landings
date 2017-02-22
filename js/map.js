@@ -10,7 +10,6 @@ function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(30, 0),
         zoom: 3,
-        disableDefaultUI: true
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
@@ -18,4 +17,27 @@ let styles = [{"featureType":"all","elementType":"all","stylers":[{"visibility":
 map.setOptions({
     styles: styles
 });
+$(window).on('load', function() {
+    // Construct the query string
+    url = 'https://data.ct.gov/resource/v4tt-nt9n.json?' +
+        '$limit=50000' +
+        '&$$app_token=tLLDhTKjLKruR1AmC4EMRiqYA';
+
+    // Intialize our map
+
+
+        // Retrieve our data and plot it
+        $.getJSON(url, function(data, textstatus) {
+          console.log(data);
+            $.each(data, function(i, entry) {
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(data[i].reclat,
+                        data[i].reclong),
+                    map: map,
+                    title: location.name
+                });
+            });
+        });
+    });
+
 }
