@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="images/Meteor-icon.png">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/stars.css">
     <title>Global meteorite landings - From 300 to 2015</title>
-  </head>
-  <body>
+</head>
 
+<body>
 
-        <div id="menu">
-          <div id="openmenu">
-              <img src="images/cancel.png" id="closemenu" alt="">
-          </div>
-          <div id='chartDiv'></div>
+    <h1>Meteorite landings around the world from xxx to 2015 ☄</h1>
+
+    <div class="meteors">
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+    </div>
+    <div id="menu">
+        <div id="openmenu">
+            <img src="images/cancel.png" id="closemenu" alt="">
         </div>
-        <div id="googleMap"></div>
+        <div id='chartDiv'></div>
+    </div>
+    <div id="googleMap"></div>
 
-        <script src="js/map.js"></script>
+    <script src="js/map.js"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxiDJsiZgNEccgAwgK5NkC83oeqmXwtRY&callback=myMap"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="crossorigin="anonymous"></script>
-        <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-        <script src="js/menu.js"></script>
-        <script src="js/chart.js"></script>
-  </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxiDJsiZgNEccgAwgK5NkC83oeqmXwtRY&callback=myMap"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+
 </html>

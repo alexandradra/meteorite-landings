@@ -7,7 +7,10 @@
     float: left;
     transition: width 1s;
 }
-
+body {
+  position: relative;
+  font-family: lato, sans-serif;
+}
 html, body {
     height: 100%;
     width: 100%;
@@ -18,17 +21,25 @@ html, body, #menu, #googleMap {
     padding: 0;
     margin: 0;
 }
-
+h1 {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 1;
+  color: #c5cddb;
+  font-size: 2em;
+}
+#menu, #openmenu {
+  background-color: rgba(197,205,219, 0.8);
+}
 #menu {
     position: absolute;
     float: left;
-    width: 500px;
+    width: 400px;
     height: 100%;
-    background-color: #c5cddb;
     transition: left 1s;
-    left:-500px;
+    left:-400px;
     z-index: 2;
-    opacity:0.8;
 }
 
 #menu.open {
@@ -41,12 +52,10 @@ html, body, #menu, #googleMap {
     position: absolute;
     top: 50px;
     right: -40px;
-    background-color: #c5cddb;
     z-index: 2;
-    padding: 3px;
+    padding: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    opacity:0.8;
 }
 #openmenu:hover{
   cursor: pointer;
@@ -72,4 +81,13 @@ html, body, #menu, #googleMap {
 }
 .gmnoprint div {
     background:none !important;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #menu {
+      width: 90%;
+      left: -90%;
+  }
+  #openmenu {
+      top: 0;
+  }
 }
