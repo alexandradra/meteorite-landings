@@ -1,6 +1,5 @@
-$(window).on('load', function() {
     // Construct the query string
-    url = 'https://data.ct.gov/resource/v4tt-nt9n.json?' +
+    url = 'https://data.nasa.gov/resource/gh4g-9sfh.json?' +
         '$limit=50000' +
         '&$$app_token=tLLDhTKjLKruR1AmC4EMRiqYA';
 
@@ -260,7 +259,6 @@ $(window).on('load', function() {
             styles: styles
         });
 
-
         // Retrieve our data and plot it
         $.getJSON(url, function(data, textstatus) {
           console.log(data);
@@ -274,4 +272,3 @@ $(window).on('load', function() {
             });
         });
     };
-});
