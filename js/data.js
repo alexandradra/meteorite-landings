@@ -1,17 +1,24 @@
     // Construct the query string
     url = 'https://data.nasa.gov/resource/gh4g-9sfh.json?' +
-        '$limit=50000' +
+        '$limit=2000' +
         '&$$app_token=tLLDhTKjLKruR1AmC4EMRiqYA';
+
+
 
     // Intialize our map
     function myMap() {
-        var mapProp = {
+        let mapProp = {
             center: new google.maps.LatLng(30, 0),
             zoom: 3,
             disableDefaultUI: true
         };
-        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        let map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
+        let markers = [];
+
+console.log(markers);
+
+        let markerCluster = new MarkerClusterer(map, markers, {imagePath: '../images/m'});
         let styles = [{
             "featureType": "all",
             "elementType": "all",
@@ -262,13 +269,19 @@
         // Retrieve our data and plot it
         $.getJSON(url, function(data, textstatus) {
           console.log(data);
+
+
+
             $.each(data, function(i, entry) {
-                var marker = new google.maps.Marker({
+                let marker = new google.maps.Marker({
                     position: new google.maps.LatLng(data[i].reclat,
                         data[i].reclong),
                     map: map,
-                    title: location.name
-                });
+                    title: data[i].name
+                })
+                markers.push(marker);
             });
+
+            console.log(markers);
         });
     };
