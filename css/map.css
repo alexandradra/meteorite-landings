@@ -45,6 +45,10 @@ h2 {
     font-size: 1.1em;
     bottom: 0;
 }
+.classof, .classof:hover {
+  color: #1F5CA9;
+  text-decoration: underline;
+}
 
 .sylvain:hover {
     color: #79AC9A;

@@ -272,11 +272,24 @@ function myMap() {
             });
 
 
-            var contentString = data[i].name + " weighs " +
-                data[i].mass + " grams, " +
-                data[i].fall + " in " +
-                data[i].year +
-                ".";
+            var contentString =
+                "<strong style='font-size:1.2em'>" +
+                data[i].name +
+                "</strong> <br/>" +
+                "Weight in gramms: " +
+                data[i].mass +
+                " gramms<br/> " +
+                "Class of meteorite: " +
+                "<a target='_blank' class='classof' href='https://en.wikipedia.org/wiki/Meteorite_classification'>" +
+                data[i].recclass +
+                "</a> <br/>" +
+                "Type of meteorite: " +
+                data[i].nametype +
+                "<br/><span style='color=#4d4848'><i>- Valid: a typical meteorite <br/>- Relict: a meteorite that has been highly degraded by weather on Earth</i></span>"+
+                "<br/>" +
+                data[i].fall +
+                " in: " +
+                data[i].year;
 
 
             // display info windows
