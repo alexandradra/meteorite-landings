@@ -267,8 +267,22 @@
                     position: new google.maps.LatLng(data[i].reclat,
                         data[i].reclong),
                     map: map,
-                    title: location.name
+                    title: data[i].name
                 });
+
+                var contentString = data[i].name + " weighs "
+                 + data[i].mass + " grams and "
+                 + data[i].fall + " in "
+                 + data[i].year
+                 +".";
+
+
+                var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+                marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
             });
         });
     };
