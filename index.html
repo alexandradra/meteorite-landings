@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="images/Meteor-icon.png">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/fontello.css" media="screen">
     <title>Global meteorite landings - From 300 to 2015</title>
-  </head>
-  <body>
+</head>
 
+<body>
 
-        <div id="menu">
-          <div id="openmenu">
-              <img src="images/cancel.png" id="closemenu" alt="">
-          </div>
-          <div id='chartDiv'></div>
+    <h1>Meteorite landings around the world from 1399 to 2015 ☄</h1>
+    <h2>Made with ❤ by :
+      <a href="https://github.com/smontel" target="_blank" title="Sylvain"><span class="icon-github sylvain"></span></a>
+      <a href="https://github.com/2hill" target="_blank" title="Jamil"><span class="icon-github jamil"></span></a>
+      <a href="https://github.com/johnnydoubt" target="_blank" title="César"><span class="icon-github cesar"></span></a>
+      <a href="https://github.com/alexandradra" target="_blank" title="Alexandra"><span class="icon-github alex"></span></a> <br/>
+      Data provided by <a class="nasa" target="_blank" href="https://data.nasa.gov/data?category=&type=&search=meteorite+landings">Nasa</a>
+    </h2>
+    <div class="meteors">
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+    </div>
+    <div id="menu">
+        <div id="openmenu">
+            <img src="images/cancel.png" id="closemenu" alt="">
         </div>
-        <div id="googleMap"></div>
+        <div id='chartDiv'></div>
+    </div>
+    <div id="googleMap"></div>
 
-
-
-
+    <!-- <script src="js/map.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="crossorigin="anonymous"></script>
         <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/data.js"></script>
         <script src="js/chart.js"></script>
+        <script src="js/stars.js"></script>
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxiDJsiZgNEccgAwgK5NkC83oeqmXwtRY&callback=myMap"></script>
 
