@@ -1,6 +1,6 @@
 // Construct the query string
 url = 'https://data.nasa.gov/resource/gh4g-9sfh.json?' +
-    '$limit=10000' +
+    '$limit=40000' +
     '&$$app_token=tLLDhTKjLKruR1AmC4EMRiqYA';
 
 // Intialize our map
